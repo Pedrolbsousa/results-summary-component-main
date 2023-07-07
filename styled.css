@@ -2,9 +2,13 @@
 
 :root {
   --primarycolor-Light: hsl(0, 100%, 67%);
+  --segundarycolor-LightAgua: hsla(0, 100%, 67%, 0.137);
   --primarycolor-Orangey: hsl(39, 100%, 56%);
+  --segundarycolor-OrangeyAgua: hsl(39, 100%, 56%, 0.137);
   --primarycolor-Green: hsl(166, 100%, 37%);
+  --segundarycolor-GreenAgua: hsl(166, 100%, 37%, 0.137);
   --primarycolor-Cobalt: hsl(234, 85%, 45%);
+  --segundarycolor-Cobalt: hsl(234, 85%, 45%, 0.137);
 
   --gradient-background-01: rgb(103, 67, 255);
   --gradient-background-02: linear-gradient(
@@ -13,9 +17,21 @@
     rgba(49, 44, 235, 1) 100%
   );
   --Neutral-White: hsl(0, 0%, 100%);
+  --Neutral-Pale: hsl(221, 100%, 96%);
+  --Neutral-Light: hsl(241, 100%, 89%);
+  --Neutral-Dark: hsl(224, 30%, 27%);
+
+  --gradient-circle-01: rgb(135, 135, 135);
+  --gradient-cirlce-02: linear-gradient(
+    6deg,
+    rgba(135, 135, 135, 0.01) 0%,
+    rgba(49, 44, 235, 1) 100%
+  );
 }
 
 body {
+  display: grid;
+  text-align: center;
   font-family: "Hanken Grotesk", sans-serif;
   font-size: 18px;
 }
@@ -26,12 +42,42 @@ body {
   width: 98vw;
   height: 96vh;
 }
+.Results,
+p {
+  color: var(--Neutral-Light);
+}
 .Results {
   background: var(--gradient-background-01);
   background: var(--gradient-background-02);
   border-radius: 30px;
-  width: 20vw;
-  height: 50vh;
+  width: 330px;
+  height: 470.5px;
+}
+.resultCircle {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: var(--gradient-circle-01);
+  background: var(--gradient-cirlce-02);
+  width: 200px;
+  height: 200px;
+  border-radius: 100px;
+}
+.tableResult {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+h1 {
+  margin: 0px;
+  font-size: 4pc;
+  color: var(--Neutral-White);
+}
+h2 {
+  color: var(--Neutral-White);
 }
 .summaryData {
   display: flex;
@@ -42,8 +88,8 @@ body {
   -webkit-box-shadow: 58px 118px 257px -95px rgba(0, 0, 0, 0.6);
   -moz-box-shadow: 58px 118px 257px -95px rgba(0, 0, 0, 0.6);
   box-shadow: 58px 118px 257px -95px rgba(0, 0, 0, 0.6);
-  width: 20vw;
-  height: 50vh;
+  width: 330px;
+  height: 470.5px;
 }
 .listSummary .attribution {
   font-size: 11px;
@@ -53,26 +99,83 @@ body {
   color: hsl(228, 45%, 44%);
 }
 ul {
+  width: 262px;
+  height: 340px;
   list-style: none;
 }
-.Light {
+.listSummary {
+  padding-left: 2px;
+}
+.titleTable {
+  display: flex;
+}
+.summary {
+  width: 262px;
+  height: 52px;
+  margin-top: 10px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.Reaction {
   color: var(--primarycolor-Light);
+  background: var(--segundarycolor-LightAgua);
 }
-.Orangey {
+.Memory {
   color: var(--primarycolor-Orangey);
+  background: var(--segundarycolor-OrangeyAgua);
 }
-.Green {
+.Verbal {
   color: var(--primarycolor-Green);
+  background: var(--segundarycolor-GreenAgua);
 }
-.Cobalt {
+.Visual {
   color: var(--primarycolor-Cobalt);
+  background: var(--segundarycolor-Cobalt);
+}
+.blackText {
+  color: var(--Neutral-Dark);
 }
 button {
-  width: 200px;
-  height: 40px;
+  cursor: pointer;
+  width: 262px;
+  height: 52px;
   border: none;
+  font-family: "Hanken Grotesk", sans-serif;
+  font-size: 18px;
   color: var(--Neutral-White);
+  background: var(--Neutral-Dark);
+  border-radius: 30px;
+}
+button:hover {
   background: var(--gradient-background-01);
   background: var(--gradient-background-02);
-  border-radius: 30px;
+}
+@media screen and (max-width: 375px) {
+  body {
+    margin: 0px;
+    font-size: 15px;
+  }
+  .dataMain {
+    width: 100vw;
+    flex-direction: column;
+    margin-bottom: 15px;
+  }
+  .tableResult {
+    flex-wrap: nowrap;
+    flex-direction: column;
+  }
+  .Results {
+    width: 375px;
+    border-radius: 0px 0px 30px 30px;
+  }
+  .listSummary,
+  .summary,
+  button {
+    width: 320px;
+  }
+  .summary {
+    justify-content: space-around;
+  }
 }
