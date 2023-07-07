@@ -1,0 +1,78 @@
+@import url("https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@500;700;800&display=swap");
+
+:root {
+  --primarycolor-Light: hsl(0, 100%, 67%);
+  --primarycolor-Orangey: hsl(39, 100%, 56%);
+  --primarycolor-Green: hsl(166, 100%, 37%);
+  --primarycolor-Cobalt: hsl(234, 85%, 45%);
+
+  --gradient-background-01: rgb(103, 67, 255);
+  --gradient-background-02: linear-gradient(
+    183deg,
+    rgba(103, 67, 255, 1) 0%,
+    rgba(49, 44, 235, 1) 100%
+  );
+  --Neutral-White: hsl(0, 0%, 100%);
+}
+
+body {
+  font-family: "Hanken Grotesk", sans-serif;
+  font-size: 18px;
+}
+.dataMain {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 98vw;
+  height: 96vh;
+}
+.Results {
+  background: var(--gradient-background-01);
+  background: var(--gradient-background-02);
+  border-radius: 30px;
+  width: 20vw;
+  height: 50vh;
+}
+.summaryData {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  border-radius: 0px 30px 30px 0px;
+  -webkit-box-shadow: 58px 118px 257px -95px rgba(0, 0, 0, 0.6);
+  -moz-box-shadow: 58px 118px 257px -95px rgba(0, 0, 0, 0.6);
+  box-shadow: 58px 118px 257px -95px rgba(0, 0, 0, 0.6);
+  width: 20vw;
+  height: 50vh;
+}
+.listSummary .attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+ul {
+  list-style: none;
+}
+.Light {
+  color: var(--primarycolor-Light);
+}
+.Orangey {
+  color: var(--primarycolor-Orangey);
+}
+.Green {
+  color: var(--primarycolor-Green);
+}
+.Cobalt {
+  color: var(--primarycolor-Cobalt);
+}
+button {
+  width: 200px;
+  height: 40px;
+  border: none;
+  color: var(--Neutral-White);
+  background: var(--gradient-background-01);
+  background: var(--gradient-background-02);
+  border-radius: 30px;
+}

@@ -3,38 +3,55 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- displays site properly based on user's device -->
-
     <link
       rel="icon"
       type="image/png"
       sizes="32x32"
       href="./assets/images/favicon-32x32.png"
     />
-
+    <link rel="stylesheet" href="styled.css" />
     <title>Frontend Mentor | Results summary component</title>
-
-    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-    <style>
-      .attribution {
-        font-size: 11px;
-        text-align: center;
-      }
-      .attribution a {
-        color: hsl(228, 45%, 44%);
-      }
-    </style>
   </head>
   <body>
-    Your Result 76 of 100 Great You scored higher than 65% of the people who
-    have taken these tests. Summary Reaction 80 / 100 Memory 92 / 100 Verbal 61
-    / 100 Visual 72 / 100 Continue
-
+    <main class="dataMain">
+      <section class="Results">
+        <ul>
+          <li>Your Result</li>
+          <li>76 of 100</li>
+          <li>Great</li>
+          <li>
+            You scored higher than 65% of the people who have taken these tests.
+          </li>
+        </ul>
+      </section>
+      <section class="summaryData">
+        <ul class="listSummary">
+          <li>Summary</li>
+          <li class="summary Light">
+            <img src="assets/images/icon-reaction.svg" alt="" />Reaction 80 /
+            100
+          </li>
+          <li class="summary Orangey">
+            <img src="assets/images/icon-memory.svg" alt="" />Memory 92 / 100
+          </li>
+          <li class="summary Green">
+            <img src="assets/images/icon-verbal.svg" alt="" />Verbal 61 / 100
+          </li>
+          <li class="summary Cobalt">
+            <img src="assets/images/icon-visual.svg" alt="" />Visual 72 / 100
+          </li>
+        </ul>
+        <button>Continue</button>
+      </section>
+    </main>
     <div class="attribution">
       Challenge by
       <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
         >Frontend Mentor</a
-      >. Coded by <a href="#">Pedro Lima</a>.
+      >. Coded by
+      <a href="https://portfolio-8qthgzgxl-pedrolbsousa.vercel.app/"
+        >Pedro Lima</a
+      >.
     </div>
   </body>
 </html>
